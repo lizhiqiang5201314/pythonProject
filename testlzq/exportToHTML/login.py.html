@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>login.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+login.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">time </span><span class="s0">import </span><span class="s1">sleep</span>
+<span class="s0">from </span><span class="s1">wsgiref </span><span class="s0">import </span><span class="s1">headers</span>
+<span class="s0">import </span><span class="s1">requests</span>
+<span class="s0">from </span><span class="s1">selenium.common.exceptions </span><span class="s0">import </span><span class="s1">NoSuchElementException</span>
+<span class="s0">from </span><span class="s1">apptest.dir.driver </span><span class="s0">import </span><span class="s1">driver</span>
+<span class="s0">from </span><span class="s1">selenium </span><span class="s0">import </span><span class="s1">webdriver</span>
+
+<span class="s1">driver = driver()</span>
+<span class="s0">def </span><span class="s1">yanzheng():</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.CheckBox'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.EditText'</span><span class="s1">).send_keys(</span><span class="s2">'li20000222'</span><span class="s1">)</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">&quot;/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.TextView&quot;</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[3]'</span><span class="s1">).click()</span>
+    <span class="s3"># driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView[3]').click()</span>
+    <span class="s3"># driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]').click()</span>
+    <span class="s3"># driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]').click()</span>
+    <span class="s3"># driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[3]').click()</span>
+
+<span class="s0">def </span><span class="s1">dingwei():</span>
+    <span class="s1">sleep(</span><span class="s4">3</span><span class="s1">)</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ListView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.TextView[2]'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[3]'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[3]/android.widget.TextView'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.TextView'</span><span class="s1">).click()</span>
+    <span class="s1">sleep(</span><span class="s4">3</span><span class="s1">)</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.FrameLayout/com.uc.webview.export.WebView/com.uc.webkit.bb/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View/android.view.View[3]/android.view.View[1]/android.view.View/android.view.View/android.view.View[1]'</span><span class="s1">).click()</span>
+
+<span class="s0">def </span><span class="s1">login() :</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.Button[1]'</span><span class="s1">).click()</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.EditText'</span><span class="s1">).send_keys(</span><span class="s2">'17347309455'</span><span class="s1">)</span>
+    <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout'</span><span class="s1">).click()</span>
+    <span class="s0">try</span><span class="s1">:</span>
+        <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]'</span><span class="s1">).click()</span>
+    <span class="s0">except </span><span class="s1">NoSuchElementException:</span>
+        <span class="s1">yanzheng()</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">yanzheng()</span>
+<span class="s1">login()</span>
+<span class="s1">sleep(</span><span class="s4">3</span><span class="s1">)</span>
+<span class="s0">def </span><span class="s1">daka() :</span>
+    <span class="s0">try</span><span class="s1">:</span>
+        <span class="s1">driver.find_element_by_xpath(</span><span class="s2">'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[1]'</span><span class="s1">).click()</span>
+    <span class="s0">except </span><span class="s1">NoSuchElementException:</span>
+        <span class="s1">dingwei()</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">dingwei()</span>
+    <span class="s1">sleep(</span><span class="s4">3</span><span class="s1">)</span>
+    <span class="s1">driver.get_screenshot_as_file(</span><span class="s2">r&quot;C:\Users\EDY\Documents\BaiduNetdiskWorkspace/截图.png&quot;</span><span class="s1">)</span>
+<span class="s1">daka()</span>
+
+<span class="s3">##########通过web自动化获取接口token</span>
+<span class="s1">driver = webdriver.Chrome()    </span><span class="s3">#初始化chrome浏览器</span>
+<span class="s1">driver.maximize_window()</span>
+<span class="s1">driver.get(</span><span class="s2">&quot;https://dev.ejiayou.com/activity/admin/login&quot;</span><span class="s1">)  </span><span class="s3">#浏览器打开页面</span>
+<span class="s1">driver.find_element_by_id(</span><span class="s2">'usernameInput'</span><span class="s1">).send_keys(</span><span class="s2">'admin'</span><span class="s1">)</span>
+<span class="s1">driver.find_element_by_id(</span><span class="s2">'passwordInput'</span><span class="s1">).send_keys(</span><span class="s2">'123456'</span><span class="s1">)</span>
+<span class="s1">driver.find_element_by_id(</span><span class="s2">'loginBtn'</span><span class="s1">).click()</span>
+<span class="s1">sleep(</span><span class="s4">3</span><span class="s1">)  </span><span class="s3"># 休眠3s</span>
+<span class="s1">a = driver.current_url  </span><span class="s3"># 获取当前url</span>
+<span class="s1">b = a.split(</span><span class="s2">'='</span><span class="s1">)[-</span><span class="s4">2</span><span class="s1">].split(</span><span class="s2">'&amp;'</span><span class="s1">)[</span><span class="s4">0</span><span class="s1">]  </span><span class="s3"># 截取token</span>
+<span class="s1">driver.quit()</span>
+
+<span class="s1">print(b)</span>
+<span class="s0">def </span><span class="s1">tongzhi1():</span>
+
+    <span class="s1">formdata = {      </span><span class="s3">#请求体</span>
+        <span class="s2">&quot;token&quot;</span><span class="s1">: b</span><span class="s0">,</span>
+        <span class="s2">&quot;userKey&quot;</span><span class="s1">: </span><span class="s2">&quot;abc465475cf19a4347a3c08d0c45c947&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;test_phone&quot;</span><span class="s1">: </span><span class="s2">&quot;17347309455&quot;</span><span class="s0">,</span>
+        <span class="s2">&quot;content&quot;</span><span class="s1">: </span><span class="s2">&quot;打卡成功!&quot;</span>
+                    <span class="s1">}</span>
+
+    <span class="s1">url = </span><span class="s2">&quot;https://dev.ejiayou.com/activity/admin/propaganda/ajax/sms_task/test_sms&quot;  </span><span class="s3">#请求url</span>
+
+    <span class="s1">headers = {</span><span class="s2">&quot;User-Agent&quot;</span><span class="s1">: </span><span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36&quot;</span><span class="s1">}</span>
+
+    <span class="s1">response = requests.post(url</span><span class="s0">, </span><span class="s1">data=formdata</span><span class="s0">, </span><span class="s1">headers=headers)</span>
+    <span class="s1">print(response.text)</span>
+    <span class="s1">print(</span><span class="s2">'打卡成功！'</span><span class="s1">)</span>
+
+<span class="s1">tongzhi1()</span>
+
+</pre>
+</body>
+</html>
