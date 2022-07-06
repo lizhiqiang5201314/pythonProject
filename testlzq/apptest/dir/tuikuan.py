@@ -1,18 +1,17 @@
-import json
 from time import sleep
-
 import requests
 from selenium import webdriver
 
-
 # 定义变量
 global Id, orderId, username, password, urlhead
-orderId = 1000000133499955
-username = '海洋石油石津加油站'  # 生产环境
-password = '147258369'         # 生产环境
-# username = '二十五日'   # 测试环境
-# password = '123456'   # 测试环境
-urlhead = 'grey'
+orderId = 1000000130093055
+# username = '海洋石油石津加油站'  # 生产环境
+# password = '147258369'         # 生产环境
+username = '二十五日'   # 测试环境
+password = '123456'   # 测试环境
+# username = '二八加油站'   # pre环境
+# password = '123456'   # pre环境
+urlhead = 'www'
 
 def getcookie():
     driver = webdriver.Chrome()  # 初始化chrome浏览器
@@ -24,11 +23,10 @@ def getcookie():
     sleep(2)
     global cookie
     cookies = driver.get_cookies()
-    cookie = cookies[0]['value']
+    # cookie = cookies[1]['value']  # 生产环境
+    cookie = cookies[0]['value']  # 测试环境
     # print(cookie)
     # print(cookies)
-
-
 
 
 # 登入收银系统
