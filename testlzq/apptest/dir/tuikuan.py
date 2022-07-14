@@ -7,7 +7,8 @@ global Id, orderId, username, password, urlhead
 
 
 # 订单号
-orderId = 9110000020188758
+
+
 
 
 
@@ -34,6 +35,9 @@ elif inputurl == 'www':
 
 else:
     print('输入有误，清重新输入')
+
+
+orderId = input('请输入订单ID:')
 
 def getcookie():
     driver = webdriver.Chrome()  # 初始化chrome浏览器
