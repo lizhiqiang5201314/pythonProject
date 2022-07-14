@@ -4,14 +4,36 @@ from selenium import webdriver
 
 # 定义变量
 global Id, orderId, username, password, urlhead
-orderId = 1000000130093055
-# username = '海洋石油石津加油站'  # 生产环境
-# password = '147258369'         # 生产环境
-username = '二十五日'   # 测试环境
-password = '123456'   # 测试环境
-# username = '二八加油站'   # pre环境
-# password = '123456'   # pre环境
-urlhead = 'www'
+
+
+# 订单号
+orderId = 9110000020188758
+
+
+
+inputurl = input("测试：dev  预发布环境：pre  灰度环境:grey  生产环境:www \n请输入退款环境：")
+if inputurl == 'dev':
+    username = '二十五日'  # 测试环境
+    password = '123456'   # 测试环境
+    urlhead = 'dev'
+
+elif inputurl == 'pre':
+    username = '二八加油站'  # pre环境
+    password = '123456'   # pre环境
+    urlhead = 'pre'
+
+elif inputurl == 'grey':
+    username = '海洋石油石津加油站'  # 灰度环境
+    password = '147258369'         # 灰度环境
+    urlhead = 'grey'
+
+elif inputurl == 'www':
+    username = '海洋石油石津加油站'  # 生产环境
+    password = '147258369'         # 生产环境
+    urlhead = 'www'
+
+else:
+    print('输入有误，清重新输入')
 
 def getcookie():
     driver = webdriver.Chrome()  # 初始化chrome浏览器
@@ -23,8 +45,10 @@ def getcookie():
     sleep(2)
     global cookie
     cookies = driver.get_cookies()
-    # cookie = cookies[1]['value']  # 生产环境
-    cookie = cookies[0]['value']  # 测试环境
+    if inputurl == 'www':
+        cookie = cookies[1]['value']  # 生产环境
+    else:
+        cookie = cookies[0]['value']  # 测试环境
     # print(cookie)
     # print(cookies)
 

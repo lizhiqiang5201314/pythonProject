@@ -82,8 +82,8 @@ daka()
 driver = webdriver.Chrome()    #初始化chrome浏览器
 driver.maximize_window()
 driver.get("https://dev.ejiayou.com/activity/admin/login")  #浏览器打开页面
-driver.find_element_by_id('usernameInput').send_keys('admin')
-driver.find_element_by_id('passwordInput').send_keys('123456')
+driver.find_element_by_id('usernameInput').send_keys('lzq')
+driver.find_element_by_id('passwordInput').send_keys('li1122')
 driver.find_element_by_id('loginBtn').click()
 sleep(3)  # 休眠3s
 a = driver.current_url  # 获取当前url
