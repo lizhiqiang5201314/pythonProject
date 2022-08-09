@@ -3,6 +3,8 @@ import requests
 from selenium import webdriver
 
 # 定义变量
+from selenium.webdriver.common.by import By
+
 global Id, orderId, username, password, urlhead
 
 # inputurl = input()
@@ -67,9 +69,9 @@ def getcookie():
     driver = webdriver.Chrome()  # 初始化chrome浏览器
     driver.minimize_window()
     driver.get("http://" + urlhead + ".ejiayou.com/station_platform/view/viewLogout.ac?loginType=1000")  # 浏览器打开页面
-    driver.find_element_by_id('username').send_keys(username)
-    driver.find_element_by_id('password').send_keys(password)
-    driver.find_element_by_xpath('//*[@id="loginform"]/div[4]/button').click()
+    driver.find_element(By.ID, 'username').send_keys(username)
+    driver.find_element(By.ID, 'password').send_keys(password)
+    driver.find_element(By.XPATH, '//*[@id="loginform"]/div[4]/button').click()
     sleep(2)
     global cookie
     cookies = driver.get_cookies()
@@ -126,6 +128,6 @@ def backorder():
 
 if __name__ == "__main__":
     getcookie()
-    login()
+    # login()
     setorder()
     backorder()
