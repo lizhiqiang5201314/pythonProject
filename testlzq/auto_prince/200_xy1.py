@@ -13,9 +13,13 @@ def xy_xy1():
     f = 0.8  # 后续升数按价差空间抽佣比例
 
     danjia = (200-a-c+t)*n / 200
-    print(danjia)
+
+    if m > danjia:
+        print('不调价！单价%s<结算价%s' % (danjia, m))
+
+    else:
+        print('调价！')
+
 
 if __name__ == '__main__':
     xy_xy1()
-
-        1
