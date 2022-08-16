@@ -24,17 +24,15 @@ def xy_xy1():
     sum1 = z*y*h+w1
     sum2 = z*x*p+z*y*(h-p)+w
 
-    print(sum1)
-    print(sum2)
-
-
-
     print(x, y)
     if m > danjia:
         print('不调价！单价%s<结算价%s' % (danjia, m))
 
     else:
-        print('调价！')
+        print('调价！,前%s升%s折,后%s升%s折' % (p, x*10, int(h-p), y*10))
+
+        print('一梯度加油总金额%s' % sum1)
+        print('二梯度加油总金额%s' % sum2)
 
 
 if __name__ == '__main__':
