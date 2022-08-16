@@ -12,7 +12,7 @@ def xy_xy1():
     t = 0  # 满200元可额外补贴t元
     h = 200/n  # 200元加油升数h=200/n
     k = n-m  # 价差空间
-    f = 0.8  # 后续升数按价差空间抽佣比例
+    f = 0.8  # 第二梯度后续升数按价差空间抽佣比例
     w1 = 1  # 第一阶段服务费
 
     danjia = (200-a-c+t)*n / 200  # 调价后单价
@@ -21,16 +21,16 @@ def xy_xy1():
 
     x = ((200-a-c)-z*y*(h-p)-w)/(z*p)  # 前 p升基于对比价 x折
 
+    sum = h*m-t
     sum1 = z*y*h+w1
     sum2 = z*x*p+z*y*(h-p)+w
 
-    print(x, y)
     if m > danjia:
         print('不调价！单价%s<结算价%s' % (danjia, m))
 
     else:
-        print('调价！,前%s升%s折,后%s升%s折' % (p, x*10, int(h-p), y*10))
-
+        print('调价！单价%s>结算价%s,前%s升%s折,后%s升%s折' % (danjia, m, p, x*10, int(h-p), y*10))
+        print('加油最低总金额%s,竞品加油总金额%s' % (sum, 200 - a))
         print('一梯度加油总金额%s' % sum1)
         print('二梯度加油总金额%s' % sum2)
 
