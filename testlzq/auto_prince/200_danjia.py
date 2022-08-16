@@ -1,4 +1,4 @@
-def xy_danjia() :
+def xy_danjia():
     g = 8.5  # 国家价 g 元/升
     n = 8.0  # 挂牌价  n 元/升
     m = 7.3  # 结算价 m 元/升
