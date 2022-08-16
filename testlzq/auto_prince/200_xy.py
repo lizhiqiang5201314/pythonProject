@@ -13,11 +13,23 @@ def xy_xy1():
     h = 200/n  # 200元加油升数h=200/n
     k = n-m  # 价差空间
     f = 0.8  # 后续升数按价差空间抽佣比例
+    w1 = 1  # 第一阶段服务费
 
-    danjia = (200-a-c+t)*n / 200
+    danjia = (200-a-c+t)*n / 200  # 调价后单价
 
-    x = [(200-a-c)-z*y*(h-p)-w]/z*p
+    y = (n-k*(1-f))/n  # 后续升数基于对比价y折
 
+    x = ((200-a-c)-z*y*(h-p)-w)/(z*p)  # 前 p升基于对比价 x折
+
+    sum1 = z*y*h+w1
+    sum2 = z*x*p+z*y*(h-p)+w
+
+    print(sum1)
+    print(sum2)
+
+
+
+    print(x, y)
     if m > danjia:
         print('不调价！单价%s<结算价%s' % (danjia, m))
 
