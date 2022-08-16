@@ -29,10 +29,10 @@ def xy_xy1():
         print('不调价！单价%s<结算价%s' % (danjia, m))
 
     else:
-        print('调价！单价%s>结算价%s,前%s升%s折,后%s升%s折' % (danjia, m, p, x*10, int(h-p), y*10))
+        print('调价！单价%s>结算价%s' % (danjia, m))
         print('加油最低总金额%s,竞品加油总金额%s' % (sum, 200 - a))
-        print('一梯度加油总金额%s' % sum1)
-        print('二梯度加油总金额%s' % sum2)
+        print('一梯度加油总金额%s,全量升数%s折' % (sum1, y*10))
+        print('二梯度加油总金额%s,前%s升%s折,后%s升%s折' % (sum2, p, x*10, int(h-p), y*10))
 
 
 if __name__ == '__main__':
