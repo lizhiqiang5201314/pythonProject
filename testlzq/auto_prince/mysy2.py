@@ -33,4 +33,4 @@ def myxy2():
 
 
 if __name__ == '__main__':
-    xy1()
+    myxy2()
